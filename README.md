@@ -34,5 +34,5 @@ pip install --user mediapipe
 I welcome any contributions to this project. If you would like to make a change, please fork the repository, make your changes and create a pull request.
 
 # Acknowledgements
-MediaPipe for providing the Facemesh model
-OpenCV for providing image processing capabilities.
+- MediaPipe for providing the Facemesh model
+- OpenCV for providing image processing capabilities.
