@@ -2,7 +2,7 @@ import cv2
 import mediapipe as mp
 import time
 
-cap = cv2.VideoCapture(r"D:\\Coding\\Opencv Computer Vision\\Face Landmarks in Real-Time\\Videos\\production ID_4736800.mp4")
+cap = cv2.VideoCapture(0)
 fourcc = cv2.VideoWriter_fourcc(*'XVID')
 out = cv2.VideoWriter('output.avi',fourcc, 5, (1280,720))
 
@@ -12,7 +12,6 @@ mpDraw = mp.solutions.drawing_utils
 mpFaceMesh = mp.solutions.face_mesh
 faceMesh = mpFaceMesh.FaceMesh(max_num_faces=5)
 # drawSpec = mpDraw.DrawingSpec(thickness=1, circle_radius=5)
-
 
 while True:
     success, img = cap.read()
@@ -35,7 +34,3 @@ while True:
     cv2.putText(b, f'FPS: {int(fps)}', (20,70), cv2.FONT_HERSHEY_PLAIN, 3, (0, 255, 0), 3)
     cv2.imshow("Image", b)
     cv2.waitKey(1)
-
-
-
-
